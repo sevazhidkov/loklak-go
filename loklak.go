@@ -84,7 +84,7 @@ type SearchResponse struct {
 	} `json:"aggregations"`
 }
 
-func search(query string) (*SearchResponse, error) {
+func Search(query string) (*SearchResponse, error) {
   resp, err := http.Get(URL_ROOT + "?q=" + query)
 
   defer resp.Body.Close()
